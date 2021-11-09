@@ -112,27 +112,5 @@ void encrypt(){
     printf("%c", en[i]);
 	
 }
-void decrypt(){
-	long int pt, ct, key = d[0], k;
-  	i = 0;
-  	while(en[i] != -1)
-  	{
-    	ct = temp[i];
-    	k = 1;
-    	for(j = 0; j < key; j++)
-    	{
-      		k = k * ct;
-      		k = k % n;
-    	}
-   		pt = k + 96;
-   		m[i] = pt;
-   		i++;
-  	}
-  	m[i] = -1;
-  	printf("\n\nDecrypted Message\n");
-  	for(i = 0; m[i] != -1; i++)
-   	printf("%c", m[i]);
-  	printf("\n");
-}
 
 // With the help of internet and a lot of self-brainstorming ... thanks Stackoverflow, google and youtube san//
